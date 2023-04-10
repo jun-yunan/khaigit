@@ -1,5 +1,4 @@
 <?php
-session_start();
 require '../mod/userCls.php';
 if (isset($_REQUEST['reqact'])) {
     $requestAction = $_REQUEST['reqact'];
@@ -35,4 +34,13 @@ if (isset($_REQUEST['reqact'])) {
                 header('location:../../index.php?req=userview&result=notok');
             }
             break;
-            
+        
+        default:
+            header('location:../../index.php?req=userview');
+            break;
+        }
+}
+else {
+    header('location:../../index.php?req=userview');
+}
+?>

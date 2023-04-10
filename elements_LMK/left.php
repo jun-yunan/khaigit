@@ -1,4 +1,4 @@
-<div>Menu</div>
+<!-- <div>Menu</div>
 <div class="cateOrder">
     <a href="#">Cấp số a </a>
 </div>
@@ -47,24 +47,24 @@
         <li><a href="index.php?req=exjs02">Ví dụ 02</a></li>
         <li><a href="index.php?req=exjs03">Ví dụ 03</a></li>
     </ul>
-</div>
+</div> -->
 
 
-<hr/>
+<!-- <hr/>
 <?php 
-require'./elements_LMK/mod/userCls.php';
+//require './elements_LMK/mod/userCls.php';
 ?>
 <div class="title_user">Danh sách người dùng</div>
 <div class="content_user">
     <?php 
-    $obj_User= new user();
-    $list_User=$obj_User->UserGetAll();
-    $I =coutn($list_User);
+    // $obj_User= new userCls();
+    // $list_User=$obj_User->UserGetAll();
+    // $I =count($list_User);
     ?>
     <p>Trong bảng có <b>?php echo $i;?</b></p>
     <?php
-    if ($i>0){
-     ?>
+    //if ($i>0){
+    ?>
     <table border="1">
         <thead>
             <tr>
@@ -83,27 +83,58 @@ require'./elements_LMK/mod/userCls.php';
         </thead>
         <tbody>
             <?php
-            foreach ($list_User as$v){
+            //foreach ($list_User as $v){
                 ?>
-             <tr>
-                <td><?php echo $v->iduser;?></td>
-                <td><?php echo $v->username;?></td>
-                <td><?php echo $v->password;?></td>
-                <td><?php echo $v->hoten;?></td>
-                <td><?php echo $v->gioitinh;?></td>
-                <td><?php echo $v->ngaysinh;?></td>
-                <td><?php echo $v->diachi;?></td>
-                <td><?php echo $v->dienthoai;?></td>
-                <td><?php echo $v->ngaydangki;?></td>
-                <td><?php echo $v->ability;?></td>
-                <td><?php echo $v->Xóa;?></td>
-             </tr>   
-             <?php 
-            }
+            <tr>
+                <td><?php //echo $v->iduser;?></td>
+                <td><?php //echo $v->username;?></td>
+                <td><?php //echo $v->password;?></td>
+                <td><?php //echo $v->hoten;?></td>
+                <td><?php //echo $v->gioitinh;?></td>
+                <td><?php //echo $v->ngaysinh;?></td>
+                <td><?php //echo $v->diachi;?></td>
+                <td><?php //echo $v->dienthoai;?></td>
+                <td><?php //echo $v->ngaydangki;?></td>
+                <td><?php //echo $v->ability;?></td>
+                <td><?php //echo $v->Xóa;?></td>
+            </tr>   
+            <?php 
+            //}
             ?>
         </tbody>
     </table>
     <?php
-        }
+        //}
     ?>
+</div> -->
+
+
+
+
+
+
+
+
+
+<h3>Menu</h3>
+<div class="cateOrder">
+    <a href="#">Quản lý</a>
+</div>
+
+<div class="itemOrder">
+    <ul>
+        <li><a href="index.php?req=userview">Tài khoản</a></li>
+    </ul>
+</div>
+
+<div class="cateOrder">
+    <a href="#">Ex jquery</a>
+</div>
+
+<div class="itemOrder">
+    <ul>
+        <li><a href="index.php?req=exjs01">Ví dụ 01</a></li>
+        <li><a href="index.php?req=exjs02">Ví dụ 02</a></li>
+        <li><a href="index.php?req=exjs03">Ví dụ 03</a></li>
+    </ul>
 </div>

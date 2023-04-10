@@ -44,60 +44,60 @@
 </div>
 
 
-<hr/>
-<?php 
-require'./elements_LMK/mod/userCls.php';
+<hr />
+<?php
+require './elements_LMK/mod/userCls.php';
 ?>
 <div class="title_user">Danh sách người dùng</div>
 <div class="content_user">
-    <?php 
-    $obj_User=new userCls();
-    $list_User=$obj_User->UserGetAll();
-    $i =count($list_User);
+    <?php
+    $obj_User = new userCls();
+    $list_User = $obj_User->UserGetAll();
+    $i = count($list_User);
     ?>
-    <p>Trong bảng có <b>?php echo $i;?</b></p>
+    <p>Trong bảng có <b><?php echo $i?></b></p>
     <?php
-    if ($i>0){
-     ?>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>Username</th>
-                <th>Password</th>
-                <th>Họ tên </th>
-                <th>giới tính    </th>
-                <th>Ngày sinh</th>
-                <th>địa chỉ</th>
-                <th>điện thoại </th>
-                <th>ngày đăng kí </th>
-                <th>hoạt động</th>
-                <th>xóa</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            foreach ($list_User as$v){
+    if ($i > 0) {
+    ?>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Họ tên </th>
+                    <th>giới tính </th>
+                    <th>Ngày sinh</th>
+                    <th>địa chỉ</th>
+                    <th>điện thoại </th>
+                    <th>ngày đăng kí </th>
+                    <th>hoạt động</th>
+                    <th>xóa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($list_User as $v) {
                 ?>
-             <tr>
-                <td><?php echo $v->iduser;?></td>
-                <td><?php echo $v->username;?></td>
-                <td><?php echo $v->password;?></td>
-                <td><?php echo $v->hoten;?></td>
-                <td><?php echo $v->gioitinh;?></td>
-                <td><?php echo $v->ngaysinh;?></td>
-                <td><?php echo $v->diachi;?></td>
-                <td><?php echo $v->dienthoai;?></td>
-                <td><?php echo $v->ngaydangki;?></td>
-                <td><?php echo $v->ability;?></td>
-                <td><?php echo $v->Xóa;?></td>
-             </tr>   
-             <?php 
-            }
-            ?>
-        </tbody>
-    </table>
+                    <tr>
+                        <td><?php echo $v->iduser; ?></td>
+                        <td><?php echo $v->username; ?></td>
+                        <td><?php echo $v->password; ?></td>
+                        <td><?php echo $v->hoten; ?></td>
+                        <td><?php echo $v->gioitinh; ?></td>
+                        <td><?php echo $v->ngaysinh; ?></td>
+                        <td><?php echo $v->diachi; ?></td>
+                        <td><?php echo $v->dienthoai; ?></td>
+                        <td><?php echo $v->ngaydangki; ?></td>
+                        <td><?php echo $v->abiliti; ?></td>
+                        <td>Xoá</td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
     <?php
-        }
+    }
     ?>
 </div>

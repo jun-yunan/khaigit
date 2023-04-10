@@ -3,7 +3,7 @@
         $request = $_REQUEST['req'];
         switch ($request) {
             case 'exjs01':
-                require './pageJS/exjs01.php';
+                require './pageJS/exjs.php';
                 break;
 
             case 'exjs02':
@@ -23,6 +23,6 @@
         }
     }
     else {
-        require './elements_LMK/mUser/default.php';
+        require './elements_LMK/default.php';
     }
 ?>
